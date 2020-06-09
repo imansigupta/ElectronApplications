@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+    <script>
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron Basics</title>
@@ -38,7 +44,7 @@
                                 Electron enables you to create desktop applications with pure JavaScript by providing a runtime with rich native (operating system) APIs. You could see it as a variant of the Node.js runtime that is focused on desktop applications instead of web servers.
                             </p>
 
-                            <button id="activate_button">Click Me!</button>
+                            <button id="activate_button" onclick="performFunction()">Click Me!</button>
 
                         </div>
 
@@ -53,7 +59,12 @@
 
 
     </main>
-
+    <script>
+        function performFunction() {
+            var p = document.getElementById("content_styler");
+            p.innerHTML = "I am the changed text";
+        }
+    </script>
 
 
 </body>
