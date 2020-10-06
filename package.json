@@ -13,7 +13,7 @@
     "author": "Mansi Gupta",
     "license": "ISC",
     "dependencies": {
-        "electron": "^9.0.0",
+        "electron": "^9.3.0",
         "socket.engine": "^0.3.0"
     }
 }
